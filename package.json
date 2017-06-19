@@ -11,7 +11,7 @@
     "lint:js": "eslint --ext .js ./",
     "lint:jsx": "eslint --ext .jsx ./",
     "lint:sass": "stylelint \"sass/**/*.scss\" && sass-lint \"sass/**/*.scss\" -q -v",
-    "start": "npm run build && babel-node index.js",
+    "start": "node index.js",
     "watch": "concurrently \"npm run watch:js\" \"npm run watch:sass\"",
     "watch:js": "webpack --watch",
     "watch:sass": "gulp watch"
