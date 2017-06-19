@@ -2,7 +2,9 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 8079;
+
+// process.env.PORT lets the port be set by Heroku
+const port =  process.env.PORT || 8079;
 
 // Strings
 const SRC = "src";
