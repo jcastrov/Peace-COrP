@@ -32,7 +32,7 @@ use(`${SRC}/js`);
 use("dist");
 use(`${SRC}/images`);
 
-get("/", `index.html`);
+get("/", `${VIEWS}/index.html`);
 
 const SUCCESFUL = `Server running at http://localhost:${port}/`;
 
