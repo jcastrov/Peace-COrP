@@ -1,0 +1,4 @@
+# Manual
+node_modules/
+dist/
+.eslintresults.txt

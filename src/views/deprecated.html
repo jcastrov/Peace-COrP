@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="style.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Peace CORps</h1>
+        <div>
+            <h2>Parameters</h2>
+            <ul>
+                <li>
+                    <label for="txtFPS">FPS:</label>
+                    <input id="txtFPS" type="text" value="60">
+                </li>
+                <li>
+                    <label for="txtMaxSpeed">Max speed:</label>
+                    <input id="txtMaxSpeed" type="text" value="60">
+                    <span>km/h</span>
+                </li>
+            </ul>
+        </div>
+        <div class="buttons-bar">
+            <div>
+                <button style="display:none;"></button>
+                <button id="btnPlay" class="btn-play">Play</button>
+                <button id="btnPause" class="btn-play">Pause</button>
+                <button id="btnDebug">Debug</button>
+            </div>
+            <div>
+                <button id="btnAddCar">Add car</button>
+            </div>
+        </div>
+        <canvas id="mainCanvas" width="980"></canvas>
+        <div>
+            <h2>State details</h2>
+            <div>
+                <h3>Main car</h3>
+                <ul>
+                    <li>
+                        <span>Speed:</span>
+                        <span id="lblSpeed">60 km/h</span>
+                    </li>
+                    <li>
+                        <span>Action:</span>
+                        <span id="lblAction">Turn right</span>
+                    </li>
+
+                </ul>
+            </div>
+            <div>
+                <h3>Next car</h3>
+                <ul>
+                    <li>
+                        <span>Speed:</span>
+                        <span id="lblSpeedNextCar">60 km/h</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--<script type="text/javascript" src="canvas.js"></script>-->
+        <script type="text/javascript" src="main.js"></script>
+    </div>
+
+</body>
+
+</html>

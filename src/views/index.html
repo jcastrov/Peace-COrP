@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Peace CORps</title>
+    <link href="style.min.css" rel="stylesheet">
+    <script src="phaser.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Peace CORps</h1>
+        <div class="buttons-bar">
+            <div>
+                <button id="btnPlay" class="btn-play hidden">Play</button>
+                <button id="btnPause" class="btn-play">Pause</button>
+                <button id="btnDebug" class="btn-debug hidden">Debug</button>
+            </div>
+            <div>
+                <button id="btnAddCar" class="hidden">Add car</button>
+            </div>
+        </div>
+
+        <div id="mainCanvas"></div>
+        <div class="div-info">
+            <div class="div-current-details">
+                <h2>Current details</h2>
+                <ul>
+                    <li>
+                        <span>Current action:</span>
+                        <span id="spanCurrentAction"></span>
+                    </li>
+                    <li>
+                        <span>Current lane:</span>
+                        <span id="spanCurrentLane"></span>
+                    </li>
+                    <li>
+                        <span>Current speed:</span>
+                        <span id="spanCurrentSpeed"></span>
+                    </li>
+                    <li>
+                        <span>Next car color:</span>
+                        <span id="spanNextCarColor"></span>
+                    </li>
+                    <!--<li>
+                        <span>Next car speed:</span>
+                        <span id="spanNextCarSpeed">20 km/h</span>
+                    </li>-->
+                    <li>
+                        <span>States generated:</span>
+                        <span id="spanStatesGenerated">0</span>
+                    </li>
+                    <li>
+                        <span>Cars generated:</span>
+                        <span id="spanCarsGenerated">0</span>
+                    </li>
+                    <li>
+                        <span>Cars crashed:</span>
+                        <span id="spanCarsCrashed">0</span>
+                    </li>
+                    <li>
+                        <span>Speed limit times:</span>
+                        <span id="spanSpeedLimitTimes">0</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="div-legend">
+                <h2>Legend</h2>
+                <table class="table-colors">
+                    <thead>
+                        <tr>
+                            <th>Color</th>
+                            <th>Name</th>
+                            <th>Speed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background-color: #de2918"></td>
+                            <td>Main Car</td>
+                            <td>- -</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #d75611"></td>
+                            <td>Car 2 (Orange)</td>
+                            <td>20 km/h</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #fcc454"></td>
+                            <td>Car 3 (Yellow)</td>
+                            <td>25 km/h</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #40cb09"></td>
+                            <td>Car 4 (Green)</td>
+                            <td>30 km/h</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #3be3f3"></td>
+                            <td>Car 5 (Cyan)</td>
+                            <td>35 km/h</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #3283ee"></td>
+                            <td>Car 6 (Blue)</td>
+                            <td>40 km/h</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #8327e8"></td>
+                            <td>Car 7 (Indigo)</td>
+                            <td>45 km/h</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #e31f9b"></td>
+                            <td>Car 8 (Magenta)</td>
+                            <td>50 km/h</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="scrollingtable">
+            <div>
+                <div id ="divLog">
+                    <table id="table-log">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div label="Learner"></div>
+                                </th>
+                                <th>
+                                    <div label="Action"></div>
+                                </th>
+                                <th>
+                                    <div label="Reward"></div>
+                                </th>
+                                <th>
+                                    <div label="State"></div>
+                                </th>
+                                <th class="scrollbarhead"></th>
+                                <!--ALWAYS ADD THIS EXTRA CELL AT END OF HEADER ROW-->
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="vendor/qlearning2.js"></script>
+        <script type="text/javascript" src="vendor/wlearning.js"></script>
+        <script type="text/javascript" src="dev/main_final.js"></script>
+    </div>
+</body>
+
+</html>

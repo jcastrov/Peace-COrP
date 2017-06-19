@@ -1,0 +1,257 @@
+html, button, input {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+button, span, th, td {
+    font-size: 14px;
+}
+
+input {
+    width: 45px;
+}
+
+label {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+canvas {
+    background: #afafaf;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+li {
+    label {
+        &:first-child {
+            text-align: right;
+            width: 120px;
+            font-weight: 700;
+            margin-right: 5px;
+            display: inline-block;
+        }
+    }
+    span {
+        &:first-child {
+            text-align: right;
+            width: 120px;
+            display: inline-block;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+        
+    }
+}
+
+th {
+    text-align: left;
+}
+
+.container {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.buttons-bar {
+    div {
+        display: inline-block;
+    }
+}
+
+// td{
+//     &:first-child {
+//         font-weight: 700;
+//     }
+// }
+
+.btn-play {
+    height: auto;
+    width: 50px;
+}
+
+.btn-debug {
+    margin-left: -6px;
+}
+
+.hidden {
+    display: none;
+}
+
+.div-info {
+    width: 230px;
+    float: left;
+}
+
+.scrollingtable {
+    float: left;
+    padding: 10px;
+}
+
+.div-current-details {
+    background: #e4e4e4;
+    padding: 12px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+// =============================================================================
+// Tables
+// =============================================================================
+#table-log {
+    width: 300px;
+    td {
+        // padding: 1px 2px;
+        // border: 1px solid #777;
+
+        &:nth-child(1), &:nth-child(3) {
+            width: 1px;
+        }
+        &:nth-child(2) {
+            width: 90px;
+        }
+    }
+}
+
+.table-colors {
+    td, tr {
+        font-size: 11px;
+    }
+}
+
+
+
+
+.scrollingtable {
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	width: auto; /*set table width here if using fixed value*/
+	height: 478px; /*set table height here; can be fixed value or %*/
+	line-height: 20px;
+	padding-top: 20px; /*this determines top caption height*/
+	padding-bottom: 20px; /*this determines bottom caption height*/
+	text-align: left;
+}
+.scrollingtable * {box-sizing: border-box;}
+.scrollingtable > div {
+	position: relative;
+	border-top: 1px solid black; /*top table border*/
+	height: 100%;
+	padding-top: 20px; /*this determines column header height*/
+}
+.scrollingtable > div:before {
+	top: 0;
+	background: #f7f7f7; /*column header background color*/
+}
+.scrollingtable > div:before,
+.scrollingtable > div > div:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 50%;
+	left: 0;
+}
+.scrollingtable > div > div {
+	/*min-height: 43px;*/ /*if using % height, make this at least large enough to fit scrollbar arrows*/
+	max-height: 100%;
+	overflow: scroll; /*set to auto if using fixed or % width; else scroll*/
+	overflow-x: hidden;
+	border: 1px solid black; /*border around table body*/
+}
+.scrollingtable > div > div:after {background: white;} /*match page background color*/
+.scrollingtable > div > div > table {
+	width: 100%;
+	border-spacing: 0;
+	margin-top: -20px; /*inverse of column header height*/
+	/*margin-right: 17px;*/ /*uncomment if using % width*/
+}
+.scrollingtable > div > div > table > caption {
+	position: absolute;
+	top: -20px; /*inverse of caption height*/
+	margin-top: -1px; /*inverse of border-width*/
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+}
+.scrollingtable > div > div > table > * > tr > * {padding: 0;}
+.scrollingtable > div > div > table > thead {
+	vertical-align: bottom;
+	white-space: nowrap;
+	text-align: center;
+}
+.scrollingtable > div > div > table > thead > tr > * > div {
+	display: inline-block;
+	padding: 0 6px 0 6px; /*header cell padding*/
+}
+.scrollingtable > div > div > table > thead > tr > :first-child:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px; /*match column header height*/
+	border-left: 1px solid black; /*leftmost header border*/
+}
+.scrollingtable > div > div > table > thead > tr > * > div[label]:before,
+.scrollingtable > div > div > table > thead > tr > * > div > div:first-child,
+.scrollingtable > div > div > table > thead > tr > * + :before {
+	position: absolute;
+	top: 0;
+	white-space: pre-wrap;
+	color: black; /*header row font color*/
+}
+.scrollingtable > div > div > table > thead > tr > * > div[label]:before,
+.scrollingtable > div > div > table > thead > tr > * > div[label]:after {content: attr(label);}
+.scrollingtable > div > div > table > thead > tr > * + :before {
+	content: "";
+	display: block;
+	min-height: 20px; /*match column header height*/
+	padding-top: 1px;
+	border-left: 1px solid black; /*borders between header cells*/
+}
+.scrollingtable .scrollbarhead {float: right;}
+.scrollingtable .scrollbarhead:before {
+	position: absolute;
+	width: 100px;
+	top: -1px; /*inverse border-width*/
+	background: white; /*match page background color*/
+}
+.scrollingtable > div > div > table > tbody > tr:after {
+	content: "";
+	display: table-cell;
+	position: relative;
+	padding: 0;
+	border-top: 1px solid black;
+	top: -1px; /*inverse of border width*/
+}
+.scrollingtable > div > div > table > tbody {vertical-align: top;}
+.scrollingtable > div > div > table > tbody > tr {background: white;}
+.scrollingtable > div > div > table > tbody > tr > * {
+	border-bottom: 1px solid black;
+	padding: 0 6px 0 6px;
+	height: 20px; /*match column header height*/
+}
+.scrollingtable > div > div > table > tbody:last-of-type > tr:last-child > * {border-bottom: none;}
+.scrollingtable > div > div > table > tbody > tr:nth-child(even) {background: gainsboro;} /*alternate row color*/
+.scrollingtable > div > div > table > tbody > tr > * + * {border-left: 1px solid black;} /*borders between body cells*/

@@ -1,0 +1,3 @@
+const config = {"nodeEnv": "development"};
+
+module.exports = config;
